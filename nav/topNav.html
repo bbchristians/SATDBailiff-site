@@ -1,4 +1,9 @@
 <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
     #pageTitle {
         color: white;
         padding-left: 15px;
@@ -14,9 +19,13 @@
     <div class="container-fluid">
         <div class="navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li id="pageTitle">SATDBailiff</li>
-                <li class="active"><a href="../index.html">Home</a></li>
+                <li id="pageTitle">
+                    <a href="index.html">
+                        SATDBailiff
+                    </a>
+                </li>
                 <li class="active"><a href="data.html">Data</a></li>
+                <li class="active"><a href="usage.html">Usage</a></li>
             </ul>
         </div>
     </div>
