@@ -1,0 +1,15 @@
+Self-Admitted Technical Debt (SATD) is a metaphorical concept
+to describe the self-documented addition of technical debt to a
+software project in the form of source-code comments.SATD  can
+linger  in  projects  and  degrade  source-code  quality, but
+can  also  be  more  visible  than  unintentionally  added
+or undocumented technical debt. Understanding the implications
+of adding SATD to a software project is important for developers
+to understand the quality trade-offs they are intentionally making.
+However, little has been done to establish a quality and large
+scale empirical history for SATD in software projects. SATDBailiff
+is a first attempt at an empirical aggregation tool for collecting
+SATD instances from Git repositories. The tool mines empirical
+histories of SATD comments by looking at all versions of source code,
+and identifying SATD using a previously published Natural Language
+Processing  tool  designed  specifically  for  SATD  detection.

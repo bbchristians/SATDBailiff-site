@@ -1,3 +1,3 @@
-# Refactoring-IWoR19
+# SATDBailiff Site
 This is the repository of our website:
-https://smilevo.github.io/self-affirmed-refactoring/
+https://bbchristians.github.io/SATDBailiffSite/
