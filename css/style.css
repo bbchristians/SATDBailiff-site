@@ -18,3 +18,29 @@ footer {
     }
     .row.content {height:auto;}
 }
+
+.data-title {
+    margin: 0 auto;
+}
+
+.data-title-name {
+    font-size: 24pt;
+    width: fit-content;
+    padding-right: 10px;
+    border-right: 1px solid #555555;
+    display: inline-block;
+    padding-top: 6px;
+}
+
+.collected-with {
+    font-size: 8pt;
+}
+
+.data-title-link {
+    width: fit-content;
+    padding: 4px;
+    display: inline-block;
+}
+.data-title-link a {
+    font-size: 16pt;
+}
