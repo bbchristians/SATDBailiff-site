@@ -44,3 +44,30 @@ footer {
 .data-title-link a {
     font-size: 16pt;
 }
+
+.citations {
+    width: fit-content;
+    height: fit-content;
+    vertical-align: bottom;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.cit-ref {
+    width: 25px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.citation {
+    margin: 0 auto;
+}
+
+.cit-content {
+    display: contents;
+}
+
+.paperContents {
+    text-align: justify;
+}

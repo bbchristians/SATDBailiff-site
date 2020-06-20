@@ -43,7 +43,7 @@
                 Abstract
             </h3>
 
-            <p id="abstractContents"></p>
+            <p id="abstractContents" class="paperContents"></p>
             <!-- Load abstract from file -->
             <script>
                 $(document).ready(function() {
@@ -58,11 +58,22 @@
             </script>
 
             <hr>
-                TODO web page body
+                <h3>What is SATDBailiff?</h3>
+                <p class="paperContents">
+                    SATDBailiff is a Java tool designed to mine the empirical history of SATD instances from Java project
+                    Git repositories on a large scale.  This is done with the goal of tracking the additions, removals, and
+                    changes to SATD instances that occur during the process of software development.  SATDBailiff’s output
+                    can be used to better understand the prominence of SATD in software projects at different points over
+                    the course of those projects’ lifetimes, while also offering new ways to interpret and visualize those
+                    SATD instances. While  SATDBailiff  accomplishes  its  objective  using  a  state-of-the-art
+                    classification  model  and  a  scalable output format, the tool was also designed with modularity in
+                    mind, to allow for the implementation of new classification  models  and  output  formats.
+                </p>
+
             <hr>
 
             <h3>Related Paper</h3>
-            <p>TODO - link to PDF</p>
+                <a href="data/SATDBailiff.pdf">SATDBailiff - Mining and Tracking Self-Admitted Technical Debt</a>
             </div>
         </div>
     </div>
