@@ -38,7 +38,75 @@
             </h1>
 
             <hr>
-                TODO web page body
+                <p>
+                    SATDBailiff can be used to to generate new datasets from Git repositories. When supplied a list of
+                    repositories and a target database configuration, SATDBailiff will crawl each commit in the target
+                    repository and output all SATD instances impacted by those commits to the specified database.
+                </p>
+
+                <h3>Setup</h3>
+
+                <p>
+                    SATDBailiff requires a few dependencies to run:
+                </p>
+
+                If running from <a href="https://github.com/bbchristians/SATDBailiff/releases">pre-compiled binaries</a>:
+                <ul>
+                    <li>Java 1.8+</li>
+                    <li>A MySQL instance (local or remote)</li>
+                </ul>
+
+                If building from source:
+                <ul>
+                    <li>Java 1.8+</li>
+                    <li>A MySQL instance (or custom output implementation)</li>
+                    <li>Maven 3</li>
+                    <li>
+                        You will also need to manually include the binaries for
+                        <a href="https://github.com/Tbabm/SATDDetector-Core">SATD Detector</a>
+                        under 'lib/' in the root directory of the file, specified in
+                        <a href="https://github.com/bbchristians/SATDBailiff/blob/master/pom.xml#L50">SATDBailiff's pom file</a>.
+                    </li>
+                </ul>
+
+                <h3>Running</h3>
+                <p>SATDBailiff can be run as a JAR file using the following command:</p>
+
+                <pre>java -jar SATDBailiff-1.0.jar -r repos.csv -d db.properties</pre>
+
+                <p>Execution requires at least the two inputs:</p>
+                <ul>
+                    <li><b>-r</b>: A CSV list containing repository URIs</li>
+                    <li><b>-d</b>: A .properties file containing db configuration.
+                        (<a href="https://github.com/bbchristians/SATDBailiff/blob/master/mySQL.properties">Example</a>)
+                    </li>
+                </ul>
+
+                <p>Other inputs are detailed in the tool's help menu:</p>
+                <pre>
+                  usage: satd-analyzer
+ -a,--diff-algorithm  &lt;ALGORITHM>   the algorithm to use for diffing (Must
+                                   be supported by JGit):
+                                   - MYERS (default)
+                                   - HISTOGRAM
+ -d,--db-props  &lt;FILE>              .properties file containing database
+                                   properties
+ -e,--show-errors                  shows errors in output
+ -h,--help                         display help menu
+ -i,--ignore  &lt;WORDS>               a text file containing words to ignore.
+                                   Comments containing any word in the
+                                   text file will be ignored
+ -l,--n_levenshtein <0.0-1.0>      the normalized levenshtein distance
+                                   threshold which determines what
+                                   similarity must be met to qualify SATD
+                                   instances as changed
+ -p,--password  &lt;PASSWORD>          password for Github authentication
+ -r,--repos  &lt;FILE>                 new-line separated file containing git
+                                   repositories
+ -u,--username  &lt;USERNAME>          username for Github authentication
+                </pre>
+
+
 
             </div>
         </div>
