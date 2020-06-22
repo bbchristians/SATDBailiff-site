@@ -61,23 +61,22 @@
                     <li>Java 1.8+</li>
                     <li>A MySQL instance (or custom output implementation)</li>
                     <li>Maven 3</li>
-                    <li>
-                        You will also need to manually include the binaries for
-                        <a href="https://github.com/Tbabm/SATDDetector-Core">SATD Detector</a>
-                        under 'lib/' in the root directory of the file, specified in
-                        <a href="https://github.com/bbchristians/SATDBailiff/blob/master/pom.xml#L50">SATDBailiff's pom file</a>.
-                    </li>
                 </ul>
 
-                <h3>Running</h3>
+                <h3>Running From Jar</h3>
                 <p>SATDBailiff can be run as a JAR file using the following command:</p>
 
                 <pre>java -jar SATDBailiff-1.0.jar -r repos.csv -d db.properties</pre>
 
                 <p>Execution requires at least the two inputs:</p>
                 <ul>
-                    <li><b>-r</b>: A CSV list containing repository URIs</li>
-                    <li><b>-d</b>: A .properties file containing db configuration.
+                    <li>
+                        <b>-r</b>: A CSV list containing repository URIs. The first entry should be the repository's
+                        URI, and the second can be an optional terminal commit hash.
+                        (<a href="https://github.com/bbchristians/SATDBailiff/blob/master/maldonado_study.csv">Example</a>)
+                    </li>
+                    <li>
+                        <b>-d</b>: A .properties file containing db configuration.
                         (<a href="https://github.com/bbchristians/SATDBailiff/blob/master/mySQL.properties">Example</a>)
                     </li>
                 </ul>
@@ -107,7 +106,18 @@
                 </pre>
 
 
+                <h3>Building From Source</h3>
 
+                <p>
+                    SATDBailiff is a Maven project, so familiarity with Maven is recommended to rebuild the tool.
+                </p>
+
+                <p>
+                    In order to use the implicitly available SATD classification feature, you must  manually include the
+                    Jar file for <a href="https://github.com/Tbabm/SATDDetector-Core/releases/tag/v0.1">SATD Detector</a>
+                    under 'lib/' in the root directory of the project, specified in
+                    <a href="https://github.com/bbchristians/SATDBailiff/blob/master/pom.xml#L50">SATDBailiff's pom file</a>.
+                </p>
             </div>
         </div>
     </div>
